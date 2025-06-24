@@ -1,0 +1,91 @@
+[
+    {
+      "model": "product.brand",
+      "pk": 1,
+      "fields": {
+        "name": "CubeMars"
+      }
+    },
+    {
+      "model": "product.reducertype",
+      "pk": 1,
+      "fields": {
+        "name": "Planetary"
+      }
+    },
+    {
+      "model": "product.series",
+      "pk": 1,
+      "fields": {
+        "brand": 1,
+        "name": "EC Series"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": 1,
+      "fields": {
+        "brand": 1,
+        "series": 1,
+        "reducer_type": 1,
+        "name": "EC42 Planetary Motor",
+        "description": "Compact planetary motor with high torque suitable for robotics and automation.",
+        "model_number": "EC42-24V",
+        "rated_torque": 1.2,
+        "rated_speed": 3000,
+        "rated_voltage": 24.0,
+        "rated_power": 50.0,
+        "stator_diameter": 42.0,
+        "stator_thickness": 15.0,
+        "gear_ratio": 5.0,
+        "price": "89.00",
+        "image": "",
+        "created_at": "2025-06-23T00:00:00Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": 2,
+      "fields": {
+        "brand": 1,
+        "series": 1,
+        "reducer_type": 1,
+        "name": "EC60 Planetary Motor",
+        "description": "Larger EC60 motor with improved torque for industrial applications.",
+        "model_number": "EC60-24V",
+        "rated_torque": 2.5,
+        "rated_speed": 2500,
+        "rated_voltage": 24.0,
+        "rated_power": 120.0,
+        "stator_diameter": 60.0,
+        "stator_thickness": 20.0,
+        "gear_ratio": 6.0,
+        "price": "149.00",
+        "image": "",
+        "created_at": "2025-06-23T00:00:00Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": 3,
+      "fields": {
+        "brand": 1,
+        "series": 1,
+        "reducer_type": 1,
+        "name": "EC80 Planetary Motor",
+        "description": "High power EC80 motor for demanding automation tasks.",
+        "model_number": "EC80-24V",
+        "rated_torque": 4.0,
+        "rated_speed": 2000,
+        "rated_voltage": 24.0,
+        "rated_power": 200.0,
+        "stator_diameter": 80.0,
+        "stator_thickness": 25.0,
+        "gear_ratio": 8.0,
+        "price": "239.00",
+        "image": "",
+        "created_at": "2025-06-23T00:00:00Z"
+      }
+    }
+  ]
+  
