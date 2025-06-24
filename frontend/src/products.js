@@ -2,6 +2,7 @@ import {
   List, Datagrid, TextField, NumberField, TextInput, NumberInput, ReferenceInput, SelectInput,
   ImageField, Filter, Show, SimpleShowLayout, ReferenceField
 } from 'react-admin';
+import Aside from './AsideFilter';
 
 
 const ProductFilter = (props) => (
@@ -22,28 +23,28 @@ const ProductFilter = (props) => (
       <SelectInput optionText="name" />
     </ReferenceInput>
 
-    <NumberInput label="Torque ≥" source="rated_torque_gte" />
-    <NumberInput label="Torque ≤" source="rated_torque_lte" />
-    <NumberInput label="Speed ≥" source="rated_speed_gte" />
-    <NumberInput label="Speed ≤" source="rated_speed_lte" />
-    <NumberInput label="Voltage ≥" source="rated_voltage_gte" />
-    <NumberInput label="Voltage ≤" source="rated_voltage_lte" />
-    <NumberInput label="Power ≥" source="rated_power_gte" />
-    <NumberInput label="Power ≤" source="rated_power_lte" />
-    <NumberInput label="Diameter ≥" source="stator_diameter_gte" />
-    <NumberInput label="Diameter ≤" source="stator_diameter_lte" />
-    <NumberInput label="Thickness ≥" source="stator_thickness_gte" />
-    <NumberInput label="Thickness ≤" source="stator_thickness_lte" />
-    <NumberInput label="Gear Ratio ≥" source="gear_ratio_gte" />
-    <NumberInput label="Gear Ratio ≤" source="gear_ratio_lte" />
-    <NumberInput label="Price ≥" source="price_gte" />
-    <NumberInput label="Price ≤" source="price_lte" />
+    <NumberInput label="Torque ≥" source="rated_torque__gte" />
+    <NumberInput label="Torque ≤" source="rated_torque__lte" />
+    <NumberInput label="Speed ≥" source="rated_speed__gte" />
+    <NumberInput label="Speed ≤" source="rated_speed__lte" />
+    <NumberInput label="Voltage ≥" source="rated_voltage__gte" />
+    <NumberInput label="Voltage ≤" source="rated_voltage__lte" />
+    <NumberInput label="Power ≥" source="rated_power__gte" />
+    <NumberInput label="Power ≤" source="rated_power__lte" />
+    <NumberInput label="Diameter ≥" source="stator_diameter__gte" />
+    <NumberInput label="Diameter ≤" source="stator_diameter__lte" />
+    <NumberInput label="Thickness ≥" source="stator_thickness__gte" />
+    <NumberInput label="Thickness ≤" source="stator_thickness__lte" />
+    <NumberInput label="Gear Ratio ≥" source="gear_ratio__gte" />
+    <NumberInput label="Gear Ratio ≤" source="gear_ratio__lte" />
+    <NumberInput label="Price ≥" source="price__gte" />
+    <NumberInput label="Price ≤" source="price__lte" />
   </Filter>
 );
 
 
 export const ProductList = props => (
-  <List filters={<ProductFilter />} {...props}>
+  <List aside={<Aside />} filters={<ProductFilter />} {...props}>
     <Datagrid rowClick="show">
       <TextField source="id" />
       <TextField source="name" />

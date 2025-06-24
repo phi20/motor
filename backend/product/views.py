@@ -10,8 +10,10 @@ class BrandViewSet(viewsets.ModelViewSet):
 
 
 class SeriesViewSet(viewsets.ModelViewSet):
-    queryset = Series.objects.select_related('brand').all()
+    queryset = Series.objects.all()
     serializer_class = SeriesSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['brand']
 
 
 class ReducerTypeViewSet(viewsets.ModelViewSet):
